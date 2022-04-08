@@ -21,3 +21,13 @@ Route::get('/', function () {
 Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
+
+// login
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+//register
+Route::get('/register', function () {
+    return view('auth.register');
+});
