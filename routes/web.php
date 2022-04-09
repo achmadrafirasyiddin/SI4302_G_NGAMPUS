@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
+
