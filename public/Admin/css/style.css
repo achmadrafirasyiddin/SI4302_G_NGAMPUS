@@ -265,6 +265,16 @@ h6 {
     color: white;
 }
 
+.btn-submit {
+    background-color: #00B5BF;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #047e85;
+    color: white;
+}
+
 
 /* Card */
 
@@ -734,9 +744,9 @@ h6 {
     align-items: center;
     font-size: 17px;
     font-weight: 300;
-    color: #00B5BF;
+    color: #9FA2B4;
+    background: #fff;
     transition: 0.3;
-    background: #EFF5F5;
     padding: 10px 15px;
     border-radius: 4px;
 }
@@ -744,16 +754,16 @@ h6 {
 .sidebar-nav .nav-link i {
     font-size: 16px;
     margin-right: 10px;
-    color: #00B5BF;
-}
-
-.sidebar-nav .nav-link.collapsed {
-    color: #9FA2B4;
-    background: #fff;
-}
-
-.sidebar-nav .nav-link.collapsed i {
     color: #899bbd;
+}
+
+.sidebar-nav .nav-link.actived {
+    color: #00B5BF;
+    background: #EFF5F5;
+}
+
+.sidebar-nav .nav-link.actived i {
+    color: #00B5BF;
 }
 
 .sidebar-nav .nav-link:hover {

@@ -99,51 +99,15 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="{{asset('Admin/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">Virza Melati</span>
+                        <img src="{{asset('Admin/img/admin.png')}}" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
                     </a>
                     <!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Web Designer</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
+                        
 
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-gear"></i>
-                                <span>Account Settings</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                                <i class="bi bi-question-circle"></i>
-                                <span>Need Help?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
+                        <li class="mb-2">
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
@@ -168,7 +132,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="index.html">
+                <a class="nav-link @yield('home')" href="">
                     <i class="bi bi-grid"></i>
                     <span>Beranda</span>
                 </a>
@@ -178,15 +142,15 @@
             <!-- <li class="nav-heading">Pages</li> -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
+                <a class="nav-link @yield('manajemenuser')" href="">
                     <i class="bi bi-people"></i>
                     <span>Manajemen Akun</span>
                 </a>
             </li>
             <!-- End Profile Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-faq.html">
+            <li class="nav-item ">
+                <a class="nav-link @yield('manajemenproduk')" href="/admin/produk">
                     <i class="bi bi-journal-text"></i>
                     <span>Manajemen Produk</span>
                 </a>
@@ -194,7 +158,7 @@
             <!-- End F.A.Q Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-register.html">
+                <a class="nav-link @yield('approvalkegiatan')" href="">
                     <i class="bi bi-card-list"></i>
                     <span>Approval Kegiatan</span>
                 </a>
@@ -202,7 +166,7 @@
             <!-- End Register Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
+                <a class="nav-link @yield('jurusan')" href="">
                     <i class="bi bi-book"></i>
                     <span>Jurusan</span>
                 </a>
@@ -210,7 +174,7 @@
             <!-- End Contact Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-login.html">
+                <a class="nav-link @yield('kampus')" href="">
                     <i class="bi bi-mortarboard"></i>
                     <span>Kampus</span>
                 </a>

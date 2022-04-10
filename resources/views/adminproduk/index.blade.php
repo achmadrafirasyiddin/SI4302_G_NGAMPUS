@@ -1,4 +1,9 @@
 @extends('layouts.admin')
+
+@section ('manajemenproduk')
+actived
+@endsection
+
 @section('konten')
 
 <main id="main" class="main">
@@ -29,7 +34,7 @@
                                 <div class="d-flex align-items-center pt-3">
 
                                 <div class="ps-3 pb-2 ">
-                                    <h6 style="color:#00B5BF">145</h6>
+                                    <h6 style="color:#00B5BF">{{ $jumlah }}</h6>
                                     <h5 class="card-title">Total Produk</h5>
                                 </div>
                                 <div class="filter p-3">
@@ -129,45 +134,49 @@
                     </div>
                 <div class="card-body">
                     
-                    <div class="table-responsive">
+                    <div class="table-responsive ">
                         <table class="table">
                             <thead style="color:#00B5BF">
                             <tr>
+                                
                                 <th scope="col">No</th>
                                 <th scope="col">Nama Produk</th>
                                 <th scope="col">Kategori Produk</th>
-                                <th scope="col">Waktu Pelaksanaan</th>
+                                <th scope="col">Jadwal</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                             </thead>
 
                             <tbody>
+                            @foreach($product as $key=> $item)
+                            
                             <tr>
+                                <th >{{ $product->firstItem() + $key }}</th>
+                                <td >{{ $item->namaproduct }}</td>
+                                <td >{{ $item->jenisproduct }}</td>
+                                <td >{{ $item->tanggal }}</td>
                                 <td >
-                                1
-                                </td>
-                                <td>
-                                Gizi
-                                </td>
-                                <td>
-                                Kepo Jurusan
-                                </td>
-                                <td>
-                                Jum'at 1 April 2022
-                                </td>
-                                <td >
-                                    <a href="" class="btn btn-detail rounded-pill">Edit</a>
-                                    <form action="" method="POST">    
-                                    <button type="submit" class="btn btn-hapus rounded-pill">Delete</button>
-                                </form> 
+                                <div class="d-flex flex-row bd-highlight">
+                                    <a href="/admin/produk/{{$item->id}}/edit" class="btn btn-detail rounded-pill">Edit</a>
+                                    <form action="/admin/produk/{{$item->id}}/delete" method="POST">  
+                                    @csrf  
+                                        <button type="submit" class="btn btn-hapus rounded-pill ms-2">Delete</button>
+                                    </form> 
+                                    </div>
                                 </td>
                             </tr>
 
-                            
+                            @endforeach
                             
                             </tbody>
                         </table>
-                    </div>
+
+
+                        <div class="paginate-container  mb-5">
+                            <div class="pagination pagination-sm justify-content-center mt-5">
+                                {{$product -> links()}}
+                            </div>
+                        </div>
                 </div>
                 </div>
             </div>
