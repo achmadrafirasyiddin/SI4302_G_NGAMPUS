@@ -17,6 +17,16 @@ Route::get('/', function () {
     return view('home');
 });
 
+//index produk
+Route::get('/produk', function () {
+    return view('produk.index');
+});
+
+//detailproduk
+Route::get('/detailproduk', function () {
+    return view('produk.detailproduk');
+});
+
 // Admin
 Route::get('/admin/produk', function () {
     return view('adminproduk.index');
