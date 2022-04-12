@@ -73,10 +73,10 @@
     </div>
     </div>
 
-    <div class="container py-4">
-    <div class="copyright">
-        &copy; Copyright <strong><span>Ngampus</span></strong>. All Rights Reserved
+    <div class="container py-1">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Ngampus</span></strong>. All Rights Reserved
+        </div>
     </div>
-
-</div>
-</footer><!-- End Footer -->
+</footer>
+<!-- End Footer -->
