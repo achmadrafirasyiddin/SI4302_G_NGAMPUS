@@ -16,7 +16,10 @@ class ProductController extends Controller
     {
         $product = Product::paginate(5);
         $jumlah = Product::count();
-        return view('adminproduk.index', compact('product', 'jumlah'));
+        $jumlah_kj = Product::where('jenisproduct','Kepo Jurusan')->get()->count();
+        $jumlah_majore = Product::where('jenisproduct','Major Experience')->get()->count();
+        $jumlah_webinar = Product::where('jenisproduct','Webinar')->get()->count();
+        return view('adminproduk.index', compact('product', 'jumlah', 'jumlah_kj', 'jumlah_majore', 'jumlah_webinar'));
     }
 
     public function create()

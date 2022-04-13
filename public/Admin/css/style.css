@@ -26,7 +26,7 @@ a {
 }
 
 a:hover {
-    color: #717ff5;
+    color: #048d94;
     text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ h6 {
 }
 
 .back-to-top:hover {
-    background: #6776f4;
+    background: #027b81;
     color: #fff;
 }
 
@@ -1074,6 +1074,31 @@ h6 {
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #666;
+}
+
+.pagination>li>a {
+    background-color: white;
+    color: #00B5BF;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    color: #00B5BF;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination>.active>a {
+    color: white;
+    background-color: #00B5BF !Important;
+    border: solid 1px #00B5BF !Important;
+}
+
+.pagination>.active>a:hover {
+    background-color: #00B5BF !Important;
+    border: solid 1px #00B5BF;
 }
 
 

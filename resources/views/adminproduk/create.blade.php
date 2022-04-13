@@ -7,7 +7,7 @@ collapsed
 @section('konten')
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Manajemen Produk</h1>
+        <h1>Tambah Produk</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin">Beranda</a></li>

@@ -58,7 +58,7 @@ actived
                                 <div class="d-flex align-items-center pt-3">
 
                                 <div class="ps-3 pb-2 ">
-                                    <h6 style="color:#00B5BF">145</h6>
+                                    <h6 style="color:#00B5BF">{{ $jumlah_kj }}</h6>
                                     <h5 class="card-title">Kepo Jurusan</h5>
                                 </div>
                                 <div class="filter p-3">
@@ -82,7 +82,7 @@ actived
                                 <div class="d-flex align-items-center pt-3">
 
                                 <div class="ps-3 pb-2 ">
-                                    <h6 style="color:#00B5BF">145</h6>
+                                    <h6 style="color:#00B5BF">{{ $jumlah_majore }}</h6>
                                     <h5 class="card-title">Major Experience</h5>
                                 </div>
                                 <div class="filter p-3">
@@ -106,7 +106,7 @@ actived
                                 <div class="d-flex align-items-center pt-3">
 
                                 <div class="ps-3 pb-2 ">
-                                    <h6 style="color:#00B5BF">145</h6>
+                                    <h6 style="color:#00B5BF">{{ $jumlah_webinar }}</h6>
                                     <h5 class="card-title">Webinar</h5>
                                 </div>
                                 <div class="filter p-3">
@@ -171,9 +171,8 @@ actived
                             </tbody>
                         </table>
 
-
-                        <div class="paginate-container  mb-5">
-                            <div class="pagination pagination-sm justify-content-center mt-5">
+                        <div class="paginate-container mb-2 ">
+                            <div class="pagination justify-content-center mt-4">
                                 {{$product -> links()}}
                             </div>
                         </div>
