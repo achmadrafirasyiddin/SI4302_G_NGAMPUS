@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,12 +24,7 @@ Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
 
-// login
-Route::get('/login', function () {
-    return view('auth.login');
-});
+Auth::routes();
 
-//register
-Route::get('/register', function () {
-    return view('auth.register');
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');

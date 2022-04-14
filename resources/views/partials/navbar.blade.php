@@ -15,10 +15,40 @@
             <li><a class="nav-link scrollto" href="#team">Team</a></li>
             
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li><a class="getstarted scrollto" href="#about">Login</a></li>
+
+            @guest
+                <li>
+                @if (Route::has('login'))
+                <a class="getstarted scrollto" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                @endif
+
+                @if (Route::has('register'))
+                @endif
+            
+            @else
+            <li class="nav-item dropdown nav-link scrollto">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center"  role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">Profile</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
+                </div>
+            </li>
+            @endguest
+            
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
-        </div>
-    </header><!-- End Header -->
+    </div>
+</header><!-- End Header -->
