@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Ngampus</title>
+    <title>Ngampus | {{ $title }} </title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -27,18 +27,20 @@
 
     <!-- Template Main CSS File -->
     <link href="{{asset('Template/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('Template/css/style-extend.css')}}" rel="stylesheet">
     
+    <!-- Template Foto GDrive -->
+    <!-- https://drive.google.com/uc?export=view&id= -->
 
-    <!-- =======================================================
-    * Template Name: Ninestars - v4.7.0
-    * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
     </head>
 
-    <body>
-    @include('partials.navbar') 
-    @include('partials.footer')
-
+    <body>   
+        @include('partials.navbar') 
+        <section class="bg">
+            <div class="container mt-5 pt-5">
+                @yield('content')
+            </div>
+        </section>
+        @include('partials.footer')
+    </body>
     
