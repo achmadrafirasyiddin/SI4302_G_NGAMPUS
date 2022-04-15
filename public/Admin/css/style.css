@@ -26,7 +26,7 @@ a {
 }
 
 a:hover {
-    color: #717ff5;
+    color: #048d94;
     text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ h6 {
 }
 
 .back-to-top:hover {
-    background: #6776f4;
+    background: #027b81;
     color: #fff;
 }
 
@@ -243,6 +243,39 @@ h6 {
 }
 
 
+/* button */
+
+.btn-detail {
+    background-color: #E4C65B;
+    color: white;
+}
+
+.btn-detail:hover {
+    background-color: #ceb351;
+    color: white;
+}
+
+.btn-hapus {
+    background-color: #E25C5C;
+    color: white;
+}
+
+.btn-hapus:hover {
+    background-color: #c24444;
+    color: white;
+}
+
+.btn-submit {
+    background-color: #00B5BF;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #047e85;
+    color: white;
+}
+
+
 /* Card */
 
 .card {
@@ -257,15 +290,13 @@ h6 {
     border-color: #ebeef4;
     background-color: #fff;
     color: #798eb3;
-    padding: 15px;
 }
 
 .card-title {
-    padding: 20px 0 15px 0;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 200;
     color: #9FA2B4;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .card-title span {
@@ -275,7 +306,7 @@ h6 {
 }
 
 .card-body {
-    padding: 0 20px 20px 20px;
+    padding: 0 5px 5px 5px;
 }
 
 .card-img-overlay {
@@ -287,7 +318,7 @@ h6 {
 
 .alert-heading {
     font-weight: 500;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
 
@@ -713,9 +744,9 @@ h6 {
     align-items: center;
     font-size: 17px;
     font-weight: 300;
-    color: #00B5BF;
+    color: #9FA2B4;
+    background: #fff;
     transition: 0.3;
-    background: #EFF5F5;
     padding: 10px 15px;
     border-radius: 4px;
 }
@@ -723,16 +754,16 @@ h6 {
 .sidebar-nav .nav-link i {
     font-size: 16px;
     margin-right: 10px;
-    color: #00B5BF;
-}
-
-.sidebar-nav .nav-link.collapsed {
-    color: #9FA2B4;
-    background: #fff;
-}
-
-.sidebar-nav .nav-link.collapsed i {
     color: #899bbd;
+}
+
+.sidebar-nav .nav-link.actived {
+    color: #00B5BF;
+    background: #EFF5F5;
+}
+
+.sidebar-nav .nav-link.actived i {
+    color: #00B5BF;
 }
 
 .sidebar-nav .nav-link:hover {
@@ -835,11 +866,12 @@ h6 {
 /* Info Cards */
 
 .dashboard .info-card {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .dashboard .info-card h6 {
-    font-size: 28px;
+    font-size: 40px;
     color: #9FA2B4;
     font-weight: 700;
     margin: 0;
@@ -847,27 +879,32 @@ h6 {
 }
 
 .dashboard .card-icon {
-    font-size: 32px;
+    font-size: 27px;
     line-height: 0;
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     flex-shrink: 0;
     flex-grow: 0;
 }
 
-.dashboard .sales-card .card-icon {
+.dashboard .total-card .card-icon {
     color: #00B5BF;
     background: #f6f6fe;
 }
 
-.dashboard .revenue-card .card-icon {
-    color: #2eca6a;
-    background: #e0f8e9;
+.dashboard .kepo-card .card-icon {
+    color: #53D258;
+    background: #e6f8e7;
 }
 
-.dashboard .customers-card .card-icon {
+.dashboard .me-card .card-icon {
+    color: #fa8082;
+    background: #f8eaea;
+}
+
+.dashboard .webinar-card .card-icon {
     color: #ff771d;
-    background: #ffecdf;
+    background: #faede5;
 }
 
 
@@ -1037,6 +1074,31 @@ h6 {
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #666;
+}
+
+.pagination>li>a {
+    background-color: white;
+    color: #00B5BF;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    color: #00B5BF;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination>.active>a {
+    color: white;
+    background-color: #00B5BF !Important;
+    border: solid 1px #00B5BF !Important;
+}
+
+.pagination>.active>a:hover {
+    background-color: #00B5BF !Important;
+    border: solid 1px #00B5BF;
 }
 
 
