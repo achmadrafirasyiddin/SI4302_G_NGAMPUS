@@ -8,16 +8,47 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-            <li><a class="nav-link scrollto {{ ($title === "home" ? 'active' : '') }}" href="/">Beranda</a></li>
-            <li><a class="nav-link scrollto {{ ($title === "about" ? 'active' : '') }}" href="/about">Produk Kami</a></li>
-            <li><a class="nav-link scrollto {{ ($title === "artikel" ? 'active' : '') }}" href="/artikel">Artikel</a></li>
-            <li><a class="nav-link scrollto {{ ($title === "portofolio" ? 'active' : '') }}" href="/portfolio">Portfolio</a></li>
-            <li><a class="nav-link scrollto {{ ($title === "team" ? 'active' : '') }}" href="/team">Team</a></li>
-            <li><a class="nav-link scrollto {{ ($title === "contact" ? 'active' : '') }}" href="/contact">Contact</a></li>
-            <li><a class="getstarted scrollto" href="/">Login</a></li>
+
+            <li><a class="nav-link " href="/">Beranda</a></li>
+            <li><a class="nav-link " href="/produk">Produk Kami</a></li>
+            <li><a class="nav-link " href="/artikel">Artikel</a></li>
+            <li><a class="nav-link " href="/team">Team</a></li>
+            <li><a class="nav-link " href="/about">Tentang</a></li>
+
+            @guest
+                <li>
+                @if (Route::has('login'))
+                <a class="getstarted scrollto" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                @endif
+
+                @if (Route::has('register'))
+                @endif
+            
+            @else
+            <li class="nav-item dropdown nav-link scrollto">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex align-items-center"  role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a href="/profile/{{ Auth::user()->id }}" class="dropdown-item">Profile</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
+                </div>
+            </li>
+            @endguest
+            
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
         </div>
     </header><!-- End Header -->
+

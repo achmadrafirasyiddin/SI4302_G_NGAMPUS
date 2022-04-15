@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\ProductController;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +17,8 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//product controller
 Route::get('/admin/produk', [ProductController::class, 'productAdmin']);
 Route::get('/admin/produk/tambah', [ProductController::class, 'create']);
 Route::post('/admin/produk', [ProductController::class, 'store']);
@@ -26,9 +32,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
-    return view('about', [
-        "title" => 'about',
+Route::get('/tentang', function () {
+    return view('tentang', [
+        "title" => 'tentang',
     ]);
 });
 
@@ -38,9 +44,9 @@ Route::get('/artikel', function () {
     ]);
 });
 
-Route::get('/portofolio', function () {
-    return view('portofolio', [
-        "title" => 'portofolio',
+Route::get('/produk', function () {
+    return view('produk.index', [
+        "title" => 'produk',
     ]);
 });
 
@@ -50,9 +56,9 @@ Route::get('/team', function () {
     ]);
 });
 
-Route::get('/contact', function () {
-    return view('contact', [
-        "title" => 'contact',
+Route::get('/kontak', function () {
+    return view('kontak', [
+        "title" => 'kontak',
     ]);
 });
 
@@ -61,7 +67,10 @@ Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
 
-//product
-Route::get('/admin/produk', 'ProductController@productAdmin');
-Route::get('/admin/produk/{id}', 'PegawaiController@destroy');
+//auth login register
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
 

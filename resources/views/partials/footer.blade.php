@@ -22,14 +22,13 @@
         <div class="row">
 
         <div class="col-lg-3 col-md-6 footer-contact">
-            <img src="{{asset('Template/img/logo2.png')}}" alt="" width="180" class="mb-3">
+            <img src="{{asset('Logo/logo2.png')}}" alt="" width="150" class="mb-3">
             <p>
-            A108 Adam Street <br>
             Jl.Telekomunikasi No.1<br>
             Bandung, Jawa Barat<br><br>
             
-            <strong>Phone:</strong> +1 5589 55488 55<br>
-            <strong>Email:</strong> info@example.com<br>
+            <strong>Phone:</strong> +62 89726371922<br>
+            <strong>Email:</strong> ngampus@gmail.com<br>
             </p>
         </div>
 
@@ -37,8 +36,9 @@
             <h4>Tentang</h4>
             <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Produk Kami</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang Kami</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">FAQ</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak Kami</a></li>
             </ul>
         </div>
 
@@ -62,7 +62,6 @@
         <div class="col-lg-2 col-md-6 footer-links">
             <h4>Kontak Kami</h4>
             <div class="social-links mt-3">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
