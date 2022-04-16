@@ -67,6 +67,11 @@ Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
 
+//register
+Route::get('/artikel', function () {
+    return view('artikel.Artikel');
+});
+
 //auth login register
 Auth::routes();
 
