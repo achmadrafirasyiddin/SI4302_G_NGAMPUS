@@ -76,10 +76,6 @@
         <div class="mx-auto">
             <div class="row row-cols-3 row-cols-3 g-4">
 
-            <div class="container">
-    <div class="card">
-        <div class="mx-auto">
-            <div class="row row-cols-3 row-cols-3 g-4">
 
                 <div class="col">
                     <div class="card">
