@@ -40,7 +40,7 @@
                             <div class="card-body">
                                 <center><h7 class="card-title"><b>Sistem Informasi</b></center>
                                 <center><p class="card-text">Jurusan Sistem Informasi adalah bidang keilmuan yang menggabungkan ilmu komputer dengan bisnis dan manajemen. Di prodi ini kamu akan belajar gimana mengidentifikasi kebutuhan dan proses bisnis perusahaan berdasarkan data-data yang dimiliki perusahan, kemudian merancang sistem yang sesuai dengan kebutuhan perusahaan.
-Jadi, selain belajar teknik pemrograman, kamu juga dituntut untuk mempelajari proses bisnis yang ada di perusahaan. Oleh karena itu, lulusan Prodi Sistem Informasi diharapkan dapat mengembangkan sebuah sistem pengolahan data dari berbagai sumber untuk dapat disajikan sebagai informasi yang bermanfaat bagi perusahaan. </p></h7></center>
+Jadi, selain belajar teknik pemrograman, kamu juga dituntut untuk mempelajari proses bisnis yang ada di perusahaan.</p></h7></center>
                             </div>
                             <div class="card-footer">
                                 <center><button type="button" href="#" class="btn btn-rounded btn-secondary">See Details</button></center>
@@ -59,6 +59,7 @@ Jadi, selain belajar teknik pemrograman, kamu juga dituntut untuk mempelajari pr
                                 <center><button type="button" href="#" class="btn btn-rounded btn-secondary">See Details</button></center> 
                             </div>
                             </div>
+                        
                             <br>
                             <div class="footer">
                                 <center><button type="button" href="/artikel/jurusan" class="btn light btn-light">Lihat Lainnya ></button></center>
@@ -68,17 +69,17 @@ Jadi, selain belajar teknik pemrograman, kamu juga dituntut untuk mempelajari pr
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    </div>
+</div>
 
+<br>
+<br>
 
+<div style="border-radius: 100px;" class="container">
 
-        <div class="container">
-        <h5><b>Kampus Rekomendasi Kami</b></h5>
-        <br>
+    <div class="shadow p-3 mb-5 bg-body rounded">
+    <h5><b>Kampus Rekomendasi Kami</b></h5>
+    <br>
 
         <div class="container">
             <div class="card">
@@ -125,12 +126,13 @@ Jadi, selain belajar teknik pemrograman, kamu juga dituntut untuk mempelajari pr
                             </div>
                             <br>
                             <div class="footer">
-                                <center><a type="button" href="/artikel/kampus" class="btn light btn-light">Lihat Lainnya ></button></center>
-                            <br> 
+                                <center><a type="button" href="/artikel/kampus" class="btn light btn-light">Lihat Lainnya ></button></center> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 @endsection
