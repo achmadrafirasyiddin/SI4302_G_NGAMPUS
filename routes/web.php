@@ -67,6 +67,19 @@ Route::get('/admin/produk', function () {
     return view('adminproduk.index');
 });
 
+//register
+Route::get('/artikel', function () {
+    return view('artikel.Artikel');
+});
+
+Route::get('/artikel/jurusan', function () {
+    return view('artikel.ArtikelJurusan');
+});
+
+Route::get('/artikel/kampus', function () {
+    return view('artikel.ArtikelKampus');
+});
+
 //auth login register
 Auth::routes();
 
